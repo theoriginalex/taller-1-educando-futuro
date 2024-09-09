@@ -2,7 +2,6 @@ from datetime import date
 from clsJson import JsonFile
 from iCrud import ICrud
 
-
 class Periodos:
     def __init__(self, id_periodo, nombre, active=True, fecha_creacion=None):
         self.id_periodo = id_periodo
@@ -17,7 +16,6 @@ class Periodos:
             'fecha_creacion': str(self.fecha_creacion),
             'active': 'Activo' if self.active else 'Inactivo'
         }
-
 
 class CrudPeriodos(ICrud):
     def __init__(self, json_file):
