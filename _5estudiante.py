@@ -78,6 +78,8 @@ class CrudEstudiantes(ICrud):
         id_estudiante = input("Ingrese el ID del estudiante a consultar: ")
         estudiantes = self.file_manager.find("id", int(id_estudiante))
         if estudiantes:
-            print(f"Estudiante encontrado: {estudiantes[0]}")
+            for i, j in estudiantes[0].items():
+                print(f"{i}: {j}")
+            #print(f"Estudiante encontrado: {estudiantes[0]}")
         else:
             print("Estudiante no encontrado.")

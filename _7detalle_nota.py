@@ -90,7 +90,9 @@ class CrudDetalleNotas(ICrud):
         id_detalle = input("Ingrese el ID del detalle de nota a consultar: ")
         detalles = self.file_manager.find("id", int(id_detalle))
         if detalles:
-            print(f"Detalle de nota encontrado: {detalles[0]}")
+            for i, j in detalles[0].items():
+                print(f"{i}: {j}")
+            #print(f"Detalle de nota encontrado: {detalles[0]}")
         else:
             print("Detalle de nota no encontrado.")
 

@@ -82,6 +82,8 @@ class CrudAsignaturas(ICrud):
         id_asignatura = input("Ingrese el ID de la asignatura a consultar: ")
         asignaturas = self.file_manager.find("id", int(id_asignatura))
         if asignaturas:
-            print(f"Asignatura encontrada: {asignaturas[0]}")
+            for i, j in asignaturas[0].items():
+                print(f"{i}: {j}")
+            #print(f"Asignatura encontrada: {asignaturas[0]}")
         else:
             print("Asignatura no encontrada.")

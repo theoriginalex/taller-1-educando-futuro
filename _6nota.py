@@ -113,6 +113,8 @@ class CrudNotas(ICrud):
         id_nota = input("Ingrese el ID de la nota a consultar: ")
         notas = self.file_manager.find("id", int(id_nota))
         if notas:
+            for i, j in notas[0].items():
+                print(f"{i}: {j}")
             print(f"Nota encontrada: {notas[0]}")
         else:
             print("Nota no encontrada.")

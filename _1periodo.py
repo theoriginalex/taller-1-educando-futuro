@@ -77,6 +77,9 @@ class CrudPeriodos(ICrud):
         id_periodo = input("Ingrese el ID del periodo a consultar: ")
         periodos = self.file_manager.find("id_periodo", int(id_periodo))
         if periodos:
-            print(f"Periodo encontrado: {periodos[0]}")
+            for i, j in periodos[0].items():
+                print(f"{i}: {j}")
+            #print(f"Periodo encontrado: {periodos[0]}")
         else:
             print("Periodo no encontrado.")
+

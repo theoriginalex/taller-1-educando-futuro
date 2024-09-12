@@ -78,6 +78,8 @@ class CrudNivelesEducativos(ICrud):
         id_nivel = input("Ingrese el ID del nivel educativo a consultar: ")
         niveles = self.file_manager.find("id", int(id_nivel))
         if niveles:
-            print(f"Nivel educativo encontrado: {niveles[0]}")
+            for i, j in niveles[0].items():
+                print(f"{i}: {j}")
+            #print(f"Nivel educativo encontrado: {niveles[0]}")
         else:
             print("Nivel educativo no encontrado.")
